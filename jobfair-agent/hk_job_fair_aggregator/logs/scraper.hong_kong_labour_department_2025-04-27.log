@@ -1,0 +1,52 @@
+2025-04-27 06:51:53,012 - scraper.hong_kong_labour_department - INFO - Starting Hong Kong Labour Department scraper
+2025-04-27 06:51:53,012 - scraper.hong_kong_labour_department - INFO - Scraping Labour Department main job fair page
+2025-04-27 06:51:53,013 - scraper.hong_kong_labour_department - INFO - Fetching page: https://www2.jobs.gov.hk/0/tc/information/Epem/Vacancy/
+2025-04-27 06:51:53,114 - scraper.hong_kong_labour_department - ERROR - Error scraping main page: Couldn't find a tree builder with the features you requested: lxml. Do you need to install a parser library?
+Traceback (most recent call last):
+  File "/Users/BeNiMiMac/jobfair-agent/hk_job_fair_aggregator/scrapers/labour_dept.py", line 80, in scrape_main_page
+    soup = self.parse_html(response.text)
+  File "/Users/BeNiMiMac/jobfair-agent/hk_job_fair_aggregator/scrapers/base.py", line 106, in parse_html
+    return BeautifulSoup(html, 'lxml')
+  File "/Users/BeNiMiMac/Library/Python/3.9/lib/python/site-packages/bs4/__init__.py", line 364, in __init__
+    raise FeatureNotFound(
+bs4.exceptions.FeatureNotFound: Couldn't find a tree builder with the features you requested: lxml. Do you need to install a parser library?
+2025-04-27 06:51:53,145 - scraper.hong_kong_labour_department - INFO - Scraping Labour Department recruitment day page
+2025-04-27 06:51:53,146 - scraper.hong_kong_labour_department - INFO - Fetching page: https://www2.jobs.gov.hk/0/tc/information/jobseekers/jobfair/
+2025-04-27 06:51:53,200 - scraper.hong_kong_labour_department - ERROR - Error scraping recruitment day page: Couldn't find a tree builder with the features you requested: lxml. Do you need to install a parser library?
+Traceback (most recent call last):
+  File "/Users/BeNiMiMac/jobfair-agent/hk_job_fair_aggregator/scrapers/labour_dept.py", line 119, in scrape_recruitment_day_page
+    soup = self.parse_html(response.text)
+  File "/Users/BeNiMiMac/jobfair-agent/hk_job_fair_aggregator/scrapers/base.py", line 106, in parse_html
+    return BeautifulSoup(html, 'lxml')
+  File "/Users/BeNiMiMac/Library/Python/3.9/lib/python/site-packages/bs4/__init__.py", line 364, in __init__
+    raise FeatureNotFound(
+bs4.exceptions.FeatureNotFound: Couldn't find a tree builder with the features you requested: lxml. Do you need to install a parser library?
+2025-04-27 06:51:53,201 - scraper.hong_kong_labour_department - INFO - Scraped 0 events
+2025-04-27 06:51:53,202 - scraper.hong_kong_labour_department - INFO - Deduplicated 0 events
+2025-04-27 06:51:53,202 - scraper.hong_kong_labour_department - INFO - No new events to save
+2025-04-27 06:55:28,487 - scraper.hong_kong_labour_department - INFO - Starting Hong Kong Labour Department scraper
+2025-04-27 06:55:28,487 - scraper.hong_kong_labour_department - INFO - Scraping Labour Department main job fair page
+2025-04-27 06:55:28,487 - scraper.hong_kong_labour_department - INFO - Fetching page: https://www2.jobs.gov.hk/0/tc/information/Epem/Vacancy/
+2025-04-27 06:55:28,576 - scraper.hong_kong_labour_department - ERROR - Error scraping main page: Couldn't find a tree builder with the features you requested: lxml. Do you need to install a parser library?
+Traceback (most recent call last):
+  File "/Users/BeNiMiMac/jobfair-agent/hk_job_fair_aggregator/scrapers/labour_dept.py", line 80, in scrape_main_page
+    soup = self.parse_html(response.text)
+  File "/Users/BeNiMiMac/jobfair-agent/hk_job_fair_aggregator/scrapers/base.py", line 106, in parse_html
+    return BeautifulSoup(html, 'lxml')
+  File "/Users/BeNiMiMac/Library/Python/3.9/lib/python/site-packages/bs4/__init__.py", line 364, in __init__
+    raise FeatureNotFound(
+bs4.exceptions.FeatureNotFound: Couldn't find a tree builder with the features you requested: lxml. Do you need to install a parser library?
+2025-04-27 06:55:28,605 - scraper.hong_kong_labour_department - INFO - Scraping Labour Department recruitment day page
+2025-04-27 06:55:28,605 - scraper.hong_kong_labour_department - INFO - Fetching page: https://www2.jobs.gov.hk/0/tc/information/jobseekers/jobfair/
+2025-04-27 06:55:28,665 - scraper.hong_kong_labour_department - ERROR - Error scraping recruitment day page: Couldn't find a tree builder with the features you requested: lxml. Do you need to install a parser library?
+Traceback (most recent call last):
+  File "/Users/BeNiMiMac/jobfair-agent/hk_job_fair_aggregator/scrapers/labour_dept.py", line 119, in scrape_recruitment_day_page
+    soup = self.parse_html(response.text)
+  File "/Users/BeNiMiMac/jobfair-agent/hk_job_fair_aggregator/scrapers/base.py", line 106, in parse_html
+    return BeautifulSoup(html, 'lxml')
+  File "/Users/BeNiMiMac/Library/Python/3.9/lib/python/site-packages/bs4/__init__.py", line 364, in __init__
+    raise FeatureNotFound(
+bs4.exceptions.FeatureNotFound: Couldn't find a tree builder with the features you requested: lxml. Do you need to install a parser library?
+2025-04-27 06:55:28,666 - scraper.hong_kong_labour_department - INFO - Scraped 0 events
+2025-04-27 06:55:28,666 - scraper.hong_kong_labour_department - INFO - Deduplicated 0 events
+2025-04-27 06:55:28,666 - scraper.hong_kong_labour_department - INFO - No new events to save

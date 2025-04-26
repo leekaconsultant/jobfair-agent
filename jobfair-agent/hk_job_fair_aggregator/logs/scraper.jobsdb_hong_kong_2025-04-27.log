@@ -1,0 +1,20 @@
+2025-04-27 06:51:53,202 - scraper.jobsdb_hong_kong - INFO - Starting JobsDB Hong Kong scraper
+2025-04-27 06:52:03,174 - scraper.jobsdb_hong_kong - INFO - Scraping JobsDB recruitment day page
+2025-04-27 06:52:03,175 - scraper.jobsdb_hong_kong - INFO - Loading page: https://hk.jobsdb.com/招聘日-recruitment-day-jobs
+2025-04-27 06:52:29,453 - scraper.jobsdb_hong_kong - ERROR - Timeout waiting for page to load: https://hk.jobsdb.com/招聘日-recruitment-day-jobs
+2025-04-27 06:52:29,455 - scraper.jobsdb_hong_kong - INFO - Scraping JobsDB job fair page
+2025-04-27 06:52:29,455 - scraper.jobsdb_hong_kong - INFO - Loading page: https://hk.jobsdb.com/job-fair-jobs
+2025-04-27 06:52:51,997 - scraper.jobsdb_hong_kong - ERROR - Timeout waiting for page to load: https://hk.jobsdb.com/job-fair-jobs
+2025-04-27 06:52:52,334 - scraper.jobsdb_hong_kong - INFO - Scraped 0 events
+2025-04-27 06:52:52,334 - scraper.jobsdb_hong_kong - INFO - Deduplicated 0 events
+2025-04-27 06:52:52,335 - scraper.jobsdb_hong_kong - INFO - No new events to save
+2025-04-27 06:55:28,666 - scraper.jobsdb_hong_kong - INFO - Starting JobsDB Hong Kong scraper
+2025-04-27 06:55:30,867 - scraper.jobsdb_hong_kong - INFO - Scraping JobsDB recruitment day page
+2025-04-27 06:55:30,886 - scraper.jobsdb_hong_kong - INFO - Loading page: https://hk.jobsdb.com/招聘日-recruitment-day-jobs
+2025-04-27 06:55:56,571 - scraper.jobsdb_hong_kong - ERROR - Timeout waiting for page to load: https://hk.jobsdb.com/招聘日-recruitment-day-jobs
+2025-04-27 06:55:56,584 - scraper.jobsdb_hong_kong - INFO - Scraping JobsDB job fair page
+2025-04-27 06:55:56,584 - scraper.jobsdb_hong_kong - INFO - Loading page: https://hk.jobsdb.com/job-fair-jobs
+2025-04-27 06:56:22,265 - scraper.jobsdb_hong_kong - ERROR - Timeout waiting for page to load: https://hk.jobsdb.com/job-fair-jobs
+2025-04-27 06:56:22,501 - scraper.jobsdb_hong_kong - INFO - Scraped 0 events
+2025-04-27 06:56:22,501 - scraper.jobsdb_hong_kong - INFO - Deduplicated 0 events
+2025-04-27 06:56:22,502 - scraper.jobsdb_hong_kong - INFO - No new events to save

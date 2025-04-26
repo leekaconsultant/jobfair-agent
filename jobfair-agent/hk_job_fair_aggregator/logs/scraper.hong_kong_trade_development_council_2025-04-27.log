@@ -1,0 +1,154 @@
+2025-04-27 06:52:52,335 - scraper.hong_kong_trade_development_council - INFO - Starting Hong Kong Trade Development Council scraper
+2025-04-27 06:52:52,335 - scraper.hong_kong_trade_development_council - INFO - Scraping HKTDC Education & Careers Expo page
+2025-04-27 06:52:52,335 - scraper.hong_kong_trade_development_council - INFO - Fetching page: https://www.hktdc.com/event/hkeducationexpo/tc
+2025-04-27 06:52:52,924 - scraper.hong_kong_trade_development_council - ERROR - Error scraping education expo page: Couldn't find a tree builder with the features you requested: lxml. Do you need to install a parser library?
+Traceback (most recent call last):
+  File "/Users/BeNiMiMac/jobfair-agent/hk_job_fair_aggregator/scrapers/hktdc.py", line 80, in scrape_education_expo
+    soup = self.parse_html(response.text)
+  File "/Users/BeNiMiMac/jobfair-agent/hk_job_fair_aggregator/scrapers/base.py", line 106, in parse_html
+    return BeautifulSoup(html, 'lxml')
+  File "/Users/BeNiMiMac/Library/Python/3.9/lib/python/site-packages/bs4/__init__.py", line 364, in __init__
+    raise FeatureNotFound(
+bs4.exceptions.FeatureNotFound: Couldn't find a tree builder with the features you requested: lxml. Do you need to install a parser library?
+2025-04-27 06:52:52,929 - scraper.hong_kong_trade_development_council - INFO - Scraping HKTDC Career Expo page
+2025-04-27 06:52:52,929 - scraper.hong_kong_trade_development_council - INFO - Fetching page: https://www.hktdc.com/event/hkcareerexpo/tc
+2025-04-27 06:52:55,537 - scraper.hong_kong_trade_development_council - INFO - Fetching page: https://www.hktdc.com/event/hkcareerexpo/tc
+2025-04-27 06:52:57,567 - scraper.hong_kong_trade_development_council - INFO - Fetching page: https://www.hktdc.com/event/hkcareerexpo/tc
+2025-04-27 06:52:57,594 - scraper.hong_kong_trade_development_council - ERROR - Error scraping career expo page: 404 Client Error: Not Found for url: https://www.hktdc.com/event/hkcareerexpo/tc
+Traceback (most recent call last):
+  File "/Users/BeNiMiMac/jobfair-agent/hk_job_fair_aggregator/scrapers/hktdc.py", line 107, in scrape_career_expo
+    response = self.get_page(self.urls['career_expo'])
+  File "/Users/BeNiMiMac/Library/Python/3.9/lib/python/site-packages/tenacity/__init__.py", line 338, in wrapped_f
+    return copy(f, *args, **kw)
+  File "/Users/BeNiMiMac/Library/Python/3.9/lib/python/site-packages/tenacity/__init__.py", line 477, in __call__
+    do = self.iter(retry_state=retry_state)
+  File "/Users/BeNiMiMac/Library/Python/3.9/lib/python/site-packages/tenacity/__init__.py", line 378, in iter
+    result = action(retry_state)
+  File "/Users/BeNiMiMac/Library/Python/3.9/lib/python/site-packages/tenacity/__init__.py", line 420, in exc_check
+    raise retry_exc.reraise()
+  File "/Users/BeNiMiMac/Library/Python/3.9/lib/python/site-packages/tenacity/__init__.py", line 187, in reraise
+    raise self.last_attempt.result()
+  File "/Library/Developer/CommandLineTools/Library/Frameworks/Python3.framework/Versions/3.9/lib/python3.9/concurrent/futures/_base.py", line 438, in result
+    return self.__get_result()
+  File "/Library/Developer/CommandLineTools/Library/Frameworks/Python3.framework/Versions/3.9/lib/python3.9/concurrent/futures/_base.py", line 390, in __get_result
+    raise self._exception
+  File "/Users/BeNiMiMac/Library/Python/3.9/lib/python/site-packages/tenacity/__init__.py", line 480, in __call__
+    result = fn(*args, **kwargs)
+  File "/Users/BeNiMiMac/jobfair-agent/hk_job_fair_aggregator/utils/logging.py", line 82, in wrapper
+    return func(*args, **kwargs)
+  File "/Users/BeNiMiMac/jobfair-agent/hk_job_fair_aggregator/scrapers/base.py", line 93, in get_page
+    response.raise_for_status()
+  File "/Users/BeNiMiMac/Library/Python/3.9/lib/python/site-packages/requests/models.py", line 1024, in raise_for_status
+    raise HTTPError(http_error_msg, response=self)
+requests.exceptions.HTTPError: 404 Client Error: Not Found for url: https://www.hktdc.com/event/hkcareerexpo/tc
+2025-04-27 06:52:57,634 - scraper.hong_kong_trade_development_council - INFO - Scraping HKTDC Events Calendar for job fairs
+2025-04-27 06:52:57,635 - scraper.hong_kong_trade_development_council - INFO - Fetching page: https://www.hktdc.com/event/schedule/tc
+2025-04-27 06:53:00,248 - scraper.hong_kong_trade_development_council - INFO - Fetching page: https://www.hktdc.com/event/schedule/tc
+2025-04-27 06:53:02,290 - scraper.hong_kong_trade_development_council - INFO - Fetching page: https://www.hktdc.com/event/schedule/tc
+2025-04-27 06:53:02,320 - scraper.hong_kong_trade_development_council - ERROR - Error scraping events calendar: 404 Client Error: Not Found for url: https://www.hktdc.com/event/schedule/tc
+Traceback (most recent call last):
+  File "/Users/BeNiMiMac/jobfair-agent/hk_job_fair_aggregator/scrapers/hktdc.py", line 135, in scrape_events_calendar
+    response = self.get_page(self.urls['events_calendar'])
+  File "/Users/BeNiMiMac/Library/Python/3.9/lib/python/site-packages/tenacity/__init__.py", line 338, in wrapped_f
+    return copy(f, *args, **kw)
+  File "/Users/BeNiMiMac/Library/Python/3.9/lib/python/site-packages/tenacity/__init__.py", line 477, in __call__
+    do = self.iter(retry_state=retry_state)
+  File "/Users/BeNiMiMac/Library/Python/3.9/lib/python/site-packages/tenacity/__init__.py", line 378, in iter
+    result = action(retry_state)
+  File "/Users/BeNiMiMac/Library/Python/3.9/lib/python/site-packages/tenacity/__init__.py", line 420, in exc_check
+    raise retry_exc.reraise()
+  File "/Users/BeNiMiMac/Library/Python/3.9/lib/python/site-packages/tenacity/__init__.py", line 187, in reraise
+    raise self.last_attempt.result()
+  File "/Library/Developer/CommandLineTools/Library/Frameworks/Python3.framework/Versions/3.9/lib/python3.9/concurrent/futures/_base.py", line 438, in result
+    return self.__get_result()
+  File "/Library/Developer/CommandLineTools/Library/Frameworks/Python3.framework/Versions/3.9/lib/python3.9/concurrent/futures/_base.py", line 390, in __get_result
+    raise self._exception
+  File "/Users/BeNiMiMac/Library/Python/3.9/lib/python/site-packages/tenacity/__init__.py", line 480, in __call__
+    result = fn(*args, **kwargs)
+  File "/Users/BeNiMiMac/jobfair-agent/hk_job_fair_aggregator/utils/logging.py", line 82, in wrapper
+    return func(*args, **kwargs)
+  File "/Users/BeNiMiMac/jobfair-agent/hk_job_fair_aggregator/scrapers/base.py", line 93, in get_page
+    response.raise_for_status()
+  File "/Users/BeNiMiMac/Library/Python/3.9/lib/python/site-packages/requests/models.py", line 1024, in raise_for_status
+    raise HTTPError(http_error_msg, response=self)
+requests.exceptions.HTTPError: 404 Client Error: Not Found for url: https://www.hktdc.com/event/schedule/tc
+2025-04-27 06:53:02,322 - scraper.hong_kong_trade_development_council - INFO - Scraped 0 events
+2025-04-27 06:53:02,322 - scraper.hong_kong_trade_development_council - INFO - Deduplicated 0 events
+2025-04-27 06:53:02,322 - scraper.hong_kong_trade_development_council - INFO - No new events to save
+2025-04-27 06:56:22,502 - scraper.hong_kong_trade_development_council - INFO - Starting Hong Kong Trade Development Council scraper
+2025-04-27 06:56:22,502 - scraper.hong_kong_trade_development_council - INFO - Scraping HKTDC Education & Careers Expo page
+2025-04-27 06:56:22,503 - scraper.hong_kong_trade_development_council - INFO - Fetching page: https://www.hktdc.com/event/hkeducationexpo/tc
+2025-04-27 06:56:22,753 - scraper.hong_kong_trade_development_council - ERROR - Error scraping education expo page: Couldn't find a tree builder with the features you requested: lxml. Do you need to install a parser library?
+Traceback (most recent call last):
+  File "/Users/BeNiMiMac/jobfair-agent/hk_job_fair_aggregator/scrapers/hktdc.py", line 80, in scrape_education_expo
+    soup = self.parse_html(response.text)
+  File "/Users/BeNiMiMac/jobfair-agent/hk_job_fair_aggregator/scrapers/base.py", line 106, in parse_html
+    return BeautifulSoup(html, 'lxml')
+  File "/Users/BeNiMiMac/Library/Python/3.9/lib/python/site-packages/bs4/__init__.py", line 364, in __init__
+    raise FeatureNotFound(
+bs4.exceptions.FeatureNotFound: Couldn't find a tree builder with the features you requested: lxml. Do you need to install a parser library?
+2025-04-27 06:56:22,766 - scraper.hong_kong_trade_development_council - INFO - Scraping HKTDC Career Expo page
+2025-04-27 06:56:22,766 - scraper.hong_kong_trade_development_council - INFO - Fetching page: https://www.hktdc.com/event/hkcareerexpo/tc
+2025-04-27 06:56:24,800 - scraper.hong_kong_trade_development_council - INFO - Fetching page: https://www.hktdc.com/event/hkcareerexpo/tc
+2025-04-27 06:56:26,831 - scraper.hong_kong_trade_development_council - INFO - Fetching page: https://www.hktdc.com/event/hkcareerexpo/tc
+2025-04-27 06:56:26,859 - scraper.hong_kong_trade_development_council - ERROR - Error scraping career expo page: 404 Client Error: Not Found for url: https://www.hktdc.com/event/hkcareerexpo/tc
+Traceback (most recent call last):
+  File "/Users/BeNiMiMac/jobfair-agent/hk_job_fair_aggregator/scrapers/hktdc.py", line 107, in scrape_career_expo
+    response = self.get_page(self.urls['career_expo'])
+  File "/Users/BeNiMiMac/Library/Python/3.9/lib/python/site-packages/tenacity/__init__.py", line 338, in wrapped_f
+    return copy(f, *args, **kw)
+  File "/Users/BeNiMiMac/Library/Python/3.9/lib/python/site-packages/tenacity/__init__.py", line 477, in __call__
+    do = self.iter(retry_state=retry_state)
+  File "/Users/BeNiMiMac/Library/Python/3.9/lib/python/site-packages/tenacity/__init__.py", line 378, in iter
+    result = action(retry_state)
+  File "/Users/BeNiMiMac/Library/Python/3.9/lib/python/site-packages/tenacity/__init__.py", line 420, in exc_check
+    raise retry_exc.reraise()
+  File "/Users/BeNiMiMac/Library/Python/3.9/lib/python/site-packages/tenacity/__init__.py", line 187, in reraise
+    raise self.last_attempt.result()
+  File "/Library/Developer/CommandLineTools/Library/Frameworks/Python3.framework/Versions/3.9/lib/python3.9/concurrent/futures/_base.py", line 438, in result
+    return self.__get_result()
+  File "/Library/Developer/CommandLineTools/Library/Frameworks/Python3.framework/Versions/3.9/lib/python3.9/concurrent/futures/_base.py", line 390, in __get_result
+    raise self._exception
+  File "/Users/BeNiMiMac/Library/Python/3.9/lib/python/site-packages/tenacity/__init__.py", line 480, in __call__
+    result = fn(*args, **kwargs)
+  File "/Users/BeNiMiMac/jobfair-agent/hk_job_fair_aggregator/utils/logging.py", line 82, in wrapper
+    return func(*args, **kwargs)
+  File "/Users/BeNiMiMac/jobfair-agent/hk_job_fair_aggregator/scrapers/base.py", line 93, in get_page
+    response.raise_for_status()
+  File "/Users/BeNiMiMac/Library/Python/3.9/lib/python/site-packages/requests/models.py", line 1024, in raise_for_status
+    raise HTTPError(http_error_msg, response=self)
+requests.exceptions.HTTPError: 404 Client Error: Not Found for url: https://www.hktdc.com/event/hkcareerexpo/tc
+2025-04-27 06:56:26,904 - scraper.hong_kong_trade_development_council - INFO - Scraping HKTDC Events Calendar for job fairs
+2025-04-27 06:56:26,904 - scraper.hong_kong_trade_development_council - INFO - Fetching page: https://www.hktdc.com/event/schedule/tc
+2025-04-27 06:56:28,933 - scraper.hong_kong_trade_development_council - INFO - Fetching page: https://www.hktdc.com/event/schedule/tc
+2025-04-27 06:56:30,960 - scraper.hong_kong_trade_development_council - INFO - Fetching page: https://www.hktdc.com/event/schedule/tc
+2025-04-27 06:56:31,117 - scraper.hong_kong_trade_development_council - ERROR - Error scraping events calendar: 404 Client Error: Not Found for url: https://www.hktdc.com/event/schedule/tc
+Traceback (most recent call last):
+  File "/Users/BeNiMiMac/jobfair-agent/hk_job_fair_aggregator/scrapers/hktdc.py", line 135, in scrape_events_calendar
+    response = self.get_page(self.urls['events_calendar'])
+  File "/Users/BeNiMiMac/Library/Python/3.9/lib/python/site-packages/tenacity/__init__.py", line 338, in wrapped_f
+    return copy(f, *args, **kw)
+  File "/Users/BeNiMiMac/Library/Python/3.9/lib/python/site-packages/tenacity/__init__.py", line 477, in __call__
+    do = self.iter(retry_state=retry_state)
+  File "/Users/BeNiMiMac/Library/Python/3.9/lib/python/site-packages/tenacity/__init__.py", line 378, in iter
+    result = action(retry_state)
+  File "/Users/BeNiMiMac/Library/Python/3.9/lib/python/site-packages/tenacity/__init__.py", line 420, in exc_check
+    raise retry_exc.reraise()
+  File "/Users/BeNiMiMac/Library/Python/3.9/lib/python/site-packages/tenacity/__init__.py", line 187, in reraise
+    raise self.last_attempt.result()
+  File "/Library/Developer/CommandLineTools/Library/Frameworks/Python3.framework/Versions/3.9/lib/python3.9/concurrent/futures/_base.py", line 438, in result
+    return self.__get_result()
+  File "/Library/Developer/CommandLineTools/Library/Frameworks/Python3.framework/Versions/3.9/lib/python3.9/concurrent/futures/_base.py", line 390, in __get_result
+    raise self._exception
+  File "/Users/BeNiMiMac/Library/Python/3.9/lib/python/site-packages/tenacity/__init__.py", line 480, in __call__
+    result = fn(*args, **kwargs)
+  File "/Users/BeNiMiMac/jobfair-agent/hk_job_fair_aggregator/utils/logging.py", line 82, in wrapper
+    return func(*args, **kwargs)
+  File "/Users/BeNiMiMac/jobfair-agent/hk_job_fair_aggregator/scrapers/base.py", line 93, in get_page
+    response.raise_for_status()
+  File "/Users/BeNiMiMac/Library/Python/3.9/lib/python/site-packages/requests/models.py", line 1024, in raise_for_status
+    raise HTTPError(http_error_msg, response=self)
+requests.exceptions.HTTPError: 404 Client Error: Not Found for url: https://www.hktdc.com/event/schedule/tc
+2025-04-27 06:56:31,119 - scraper.hong_kong_trade_development_council - INFO - Scraped 0 events
+2025-04-27 06:56:31,120 - scraper.hong_kong_trade_development_council - INFO - Deduplicated 0 events
+2025-04-27 06:56:31,120 - scraper.hong_kong_trade_development_council - INFO - No new events to save
